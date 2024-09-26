@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: simple-api
+  version: 0.1.0
+x-kusk:
+  mocking:
+    enabled: false
+  upstream:
+    service:
+      name: hello-world-svc
+      namespace: default
+      port: 8080
+paths:
+  /hello:
+    get:
+      responses:
+        "200":
+          description: A simple hello world!
+          content:
+            application/json:
+              example: 
+                message: Hello from a mocked response!
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string

@@ -1,0 +1,13 @@
+overlays: 1.0.0
+extends: ./openapi.yaml
+actions:
+  - target: "$"
+    update:
+      x-kusk:
+        mocking:
+          enabled: true
+        upstream:
+          service:
+            name: hello-world-svc
+            namespace: default
+            port: 8080
