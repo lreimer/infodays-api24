@@ -6,6 +6,16 @@ actions:
       x-kusk:
         mocking:
           enabled: true
+        cors:
+          origins:
+            - "*"
+          methods:
+            - POST
+            - GET
+          headers:
+            - Content-Type
+          credentials: true
+          max_age: 86200
         upstream:
           service:
             name: hello-world-svc
