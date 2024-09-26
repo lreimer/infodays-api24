@@ -9,6 +9,7 @@ brew install
 
 kusk cluster install
 kusk deploy -i examples/simple/hello-api-mock.yaml
+kusk get api simple-api -o yaml
 kusk dashboard
 
 # call the mocked API
